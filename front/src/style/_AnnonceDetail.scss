@@ -1,0 +1,110 @@
+.annonce-container {
+	display: flex;
+	flex-direction: column;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	min-height: 300px;
+	border: solid #a7bec5 1px;
+	border-radius: 6px;
+	margin-bottom: 5px;
+
+	.annonce-picture {
+		height: 100%;
+		width: 100%;
+		border-radius: 6px;
+	}
+	h1 {
+		width: 100%;
+		font-size: 0.7em;
+		text-align: center;
+		font-weight: normal;
+		text-transform: uppercase;
+		color: #434955b2;
+	}
+	.annonce-separator {
+		width: 60%;
+		height: 1px;
+		margin-left: auto;
+		margin-right: auto;
+		background-color: #7ab7c7;
+	}
+	.info {
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		display: flex;
+
+		.code-postal {
+			width: 50%;
+			display: block;
+			font-size: 0.7em;
+			text-align: center;
+			font-weight: normal;
+			text-transform: uppercase;
+			color: #434955b2;
+		}
+		.prix {
+			width: 30%;
+			display: block;
+			font-size: 0.7em;
+			text-align: center;
+			font-weight: normal;
+			text-transform: uppercase;
+			color: #434955b2;
+		}
+		img {
+			margin-top: 12px;
+			height: 15px;
+			width: auto;
+		}
+	}
+	.description {
+		padding-top: 20px;
+		min-height: 80px;
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 0.7em;
+		color: #434955b2;
+	}
+
+	.bottom-card {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+
+		.modify {
+			padding-left: 20px;
+		}
+		.delete {
+			padding-right: 20px;
+		}
+	}
+}
+
+.sold {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 15px;
+
+	label {
+		text-transform: uppercase;
+		font-size: 0.7em;
+		color: #434955b2;
+	}
+}
+
+
+#inputModif{
+background-color: red !important;
+
+}
+
+input[type="text"]:disabled{
+	background-color: blue;
+}

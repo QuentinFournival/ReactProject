@@ -1,0 +1,103 @@
+.containerBox {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+
+    .formAnnonce {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 70%;
+
+        .annonce {
+            width: 100%;
+            padding: 5px;
+            height: 40px;
+            margin: 10px;
+            display: flex;
+            position: relative;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            border: solid 1px black;
+            border-radius: 5px;
+            .puce {
+                width: 15px;
+                height: 15px;
+                background: #233d5e;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                transform: translate(0%, -50%);
+                left: 30px;
+            }
+            input {
+                appearance: none;
+                border: none;
+                width: 70%;
+                padding-left: 20px;
+            }
+            #select {
+                border: none;
+                background: none;
+            }
+        }
+    }
+    .plateforme {
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+    }
+    .boxes {
+        padding-bottom: 20px;
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-items: center;
+        .checkbox {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            label {
+                width: calc(50% - 20px);
+                margin: 10px;
+                padding-left: 50px;
+                position: relative;
+                img {
+                    width: 20px;
+                    height: 20px;
+                    left: 20px;
+                    object-fit: cover;
+                    position: absolute;
+                }
+            }
+            input[type="checkbox"] {
+                width: calc(50% - 20px);
+                margin: 10px;
+                height: 20px;
+                width: 20px;
+            }
+        }
+    }
+    .container-btn {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        padding-top: 20px;
+        button {
+            appearance: none;
+            background: #233d5e;
+            padding: 5px 15px;
+            border-radius: 10px;
+            width: 120px;
+            margin: 10px;
+            border: none;
+            color: white;
+            font-size: 14px;
+        }
+    }
+}

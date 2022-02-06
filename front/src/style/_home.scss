@@ -1,0 +1,39 @@
+.content {
+    display: none;
+    width: 100%;
+    height: 700px;
+    color: #233d5e;
+    background: white;
+    transition: all 1s;
+}
+
+.content-active {
+    display: block;
+    transition: all 1s;
+}
+
+// @keyframes circle-in-bottom-right {
+//     from {
+//         clip-path: circle(0%);
+//     }
+//     to {
+//         clip-path: circle(150% at bottom right);
+//     }
+// }
+
+// [transition-style="in:circle:bottom-right"] {
+//     animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) circle-in-bottom-right both;
+// }
+// @keyframes in-circle-swoop {
+//     from {
+//         clip-path: var(--circle-top-right-out);
+//     }
+//     to {
+//         clip-path: var(--circle-bottom-right-in);
+//     }
+// }
+
+// [transition-style="in:custom:circle-swoop"] {
+//     --transition__duration: 5s;
+//     animation-name: in-circle-swoop;
+// }

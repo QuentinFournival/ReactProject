@@ -1,0 +1,402 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "BluBlod Docs",
+    "description": "Blublod API Documentation"
+  },
+  "host": "localhost:8000",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "Users",
+      "description": "API for users in the system"
+    }
+  ],
+  "schemes": ["http"],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+
+
+
+
+
+
+  "paths": {
+    "/": {
+      "post": {
+        "tags": ["Users"],
+        "summary": "Create new user",
+        "description": "Create new user in BDD ",
+        "response": {
+          "200": {
+            "description" : "Create new user in BDD"
+          }
+        }
+      }
+    },   
+
+    "/users": {
+      "get": {
+        "tags": ["Users"],
+        "summary": "Get all users in system",
+        "responses": {
+          "200": {
+            "description": "Show all users",
+            "schema": {
+              "$ref": "#/definitions/UserSchema"
+            }
+          }
+        }
+      }
+    },
+
+    "/put": { 
+      "put": {
+        "tags": ["Users"],
+        "summary": "Update user",
+        "description": "Route = / Update user informations in BDD ",
+        "response": {
+          "200": {
+            "description" : "User Information update OK"
+          }
+        }
+      }
+    },
+
+    "/delete": { 
+      "delete": {
+        "tags": ["Users"],
+        "summary": "Delete user",
+        "description": "Route = / Delete user in BDD ",
+        "response": {
+          "200": {
+            "description" : "Delete OK"
+          }
+        }
+      }
+    },
+
+    "/login": { 
+      "post": {
+        "tags": ["Users"],
+        "summary": "LogIn user",
+        "description": "Login with mail and password",
+        "response": {
+          "200": {
+            "description" : "Login OK + token JWT"
+          }
+        }
+      }
+    },
+
+    "/logout": { 
+      "post": {
+        "tags": ["Users"],
+        "summary": "LogOut user",
+        "description": "LogOut and erase token",
+        "response": {
+          "200": {
+            "description" : "LogOut OK + token jwt HS"
+          }
+        }
+      }
+    },
+
+    "/verifymail/id": { 
+      "get": {
+        "tags": ["Users"],
+        "summary": "Verify User mail",
+        "description": "Send mail at user email adress to verify account",
+        "response": {
+          "200": {
+            "description" : "Verify mail sended"
+          }
+        }
+      }
+    },
+
+    "/forgot": { 
+      "post": {
+        "tags": ["Users"],
+        "summary": "Forgot password mail",
+        "description": "Send mail at user email adress with link to reset password",
+        "response": {
+          "200": {
+            "description" : "Reset password mail sended"
+          }
+        }
+      }
+    },
+
+    "/changepass": { 
+      "post": {
+        "tags": ["Users"],
+        "summary": "Change password",
+        "description": "When user validate link in reset mail, he can change his password",
+        "response": {
+          "200": {
+            "description" : "Password changed"
+          }
+        }
+      }
+    },
+
+    "/changemail/id": { 
+      "post": {
+        "tags": ["Users"],
+        "summary": "New user mail adress",
+        "description": "Send mail at new user email adress",
+        "response": {
+          "200": {
+            "description" : "Mail sended"
+          }
+        }
+      }
+    },
+
+    "/confirmemail": { 
+      "post": {
+        "tags": ["Users"],
+        "summary": "New user mail adress confirmation",
+        "description": "New user mail adress validate and update",
+        "response": {
+          "200": {
+            "description" : "Update user mail adress in BDD"
+          }
+        }
+      }
+    },
+
+    "/post": { 
+      "post": {
+        "tags": ["Posts"],
+        "summary": "Create new post",
+        "description": "Create new post and save in BDD",
+        "response": {
+          "200": {
+            "description" : "Create new post and save in BDD",
+            "schema": {
+              "$ref": "#/definitions/PostSchema"
+            }
+          }
+        }
+      }
+    },
+
+    "/postget": { 
+      "get": {
+        "tags": ["Posts"],
+        "summary": "Show all posts",
+        "description": "Route = /post  Show all posts validate by admin",
+        "response": {
+          "200": {
+            "description" : "Show all posts validate by admin"
+          }
+        }
+      }
+    },
+
+    "/post/id": { 
+      "put": {
+        "tags": ["Posts"],
+        "summary": "Update Post",
+        "description": "Update post or field(s) post",
+        "response": {
+          "200": {
+            "description" : "Post updated"
+          }
+        }
+      }
+    },
+
+    "/post/iddelete": { 
+      "delete": {
+        "tags": ["Posts"],
+        "summary": "Delete Post",
+        "description": "Route = /post/id  Delete post",
+        "response": {
+          "200": {
+            "description" : "Post deleted in BDD"
+          }
+        }
+      }
+    },
+
+    "/verifypost/id": { 
+      "get": {
+        "tags": ["Posts"],
+        "summary": "Validate Post",
+        "description": "turn the StatusValidate of the post to True collection 'posts'",
+        "response": {
+          "200": {
+            "description" : "StatusValidate = true in BDD"
+          }
+        }
+      }
+    },
+
+    "/soldpost": { 
+      "post": {
+        "tags": ["Posts"],
+        "summary": "Update and  deleteb post",
+        "description": "Update post status sold and delete it",
+        "response": {
+          "200": {
+            "description" : "StatusSold = true and delete post in BDD and in user's annonces"
+          }
+        }
+      }
+    },
+
+    "/admin/setadmin/id": { 
+      "post": {
+        "tags": ["Admin"],
+        "summary": "Set user account to Admin account",
+        "description": "Update user account to Admin account",
+        "response": {
+          "200": {
+            "description" : "Admin field in user = true"
+          }
+        }
+      }
+    },
+
+    "/admin/user/id": { 
+      "put": {
+        "tags": ["Admin"],
+        "summary": "Update user name",
+        "description": "Admin route to update user name/firstname",
+        "response": {
+          "200": {
+            "description" : "User name updated in BDD"
+          }
+        }
+      }
+    },
+
+    "/admin/user/iddelete": { 
+      "delete": {
+        "tags": ["Admin"],
+        "summary": "Delete user",
+        "description": "Route = /admin/user/id Admin route to delete user",
+        "response": {
+          "200": {
+            "description" : "User deleted in BDD"
+          }
+        }
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+  },
+
+
+  "definitions": {
+
+    "UserSchema": {
+      "required": ["name", "firstname", "email", "password", "status"],
+      "properties": {
+        "_id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "firstname": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string",
+          "uniqueItems": true
+        },
+        "password": {
+          "type": "string"
+        },
+        "annonces": {
+          "type": "array",
+          "$ref": "#/definitions/PostSchema"
+        },
+        "status": {
+          "type": "boolean"
+        },
+        "resetPass": {
+          "type": "array"
+        },
+        "resetEmail": {
+          "type": "array"
+        }
+      }
+    },
+
+
+    "PostSchema": {
+      "required": ["codePostal", "categorie", "titre", "description", "prix"],
+      "properties": {
+        "_id": {
+          "type": "string"
+        },
+        "author": {
+          "type": "string",
+          "$ref": "#/definitions/UserSchema"
+        },
+        "codePostal": {
+          "type": "integer"
+        },
+        "categorie": {
+          "type": "array",
+          "$ref": "#/definitions/CategorieSchema/name"
+        },
+        "titre": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "prix": {
+          "type": "integer"
+        },
+        "statusValisate": {
+          "type": "boolean"
+        },
+        "statusSold": {
+          "type": "boolean"
+        }
+      }
+    },
+
+   
+    "CategorieSchema": {
+      "required": ["name"],
+      "properties": {
+        "_id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import "./variable";
+@import "./reset.scss";
+@import "./header.scss";
+@import "./login.scss";
+@import "./inscription";
+@import "./tabnav";
+@import "./home";
+@import "./welcome";
+@import "./annonce";
+@import "./addAnnonce";
+@import "./AnnonceDetail";
+body {
+    font-family: "roboto";
+}

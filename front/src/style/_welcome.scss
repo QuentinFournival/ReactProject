@@ -1,0 +1,39 @@
+.content-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+    .coming {
+        font-size: 35px;
+        padding-top: 50px;
+        font-weight: 700;
+        font-family: "roboto";
+        width: 100%;
+        text-align: center;
+        padding-top: 80px;
+    }
+    img {
+        height: 100px;
+        z-index: 10;
+    }
+
+    h2 {
+        font-size: 30px;
+        color: var(--text-color);
+        text-align: center;
+        padding-top: 50px;
+    }
+    p {
+        text-align: center;
+        padding: 20px;
+        width: 100%;
+        font-size: 20px;
+    }
+    i {
+        font-size: 50px;
+        padding-top: 20px;
+    }
+}
